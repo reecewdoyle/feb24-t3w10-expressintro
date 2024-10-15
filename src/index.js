@@ -11,7 +11,20 @@ app.get("/", (request, response) => {
 	// response.send("<h1>Hello world!</h1>");
 	response.json({
 		message:"Hello world!"
-	})
+	});
+});
+
+app.post("/", (request, response) => {
+	response.json({
+		message: "POST request received!"
+	});
+});
+
+// http://localhost:3000/bananas
+app.post("/bananas", (request, response) => {
+	response.json({
+		message: "POST bananas received!"
+	});
 });
 
 const PORT = 3000;
